@@ -1,11 +1,8 @@
-﻿using System;
-
-namespace BloodCore.Persistence.Context
+﻿namespace BloodCore.Persistence.Context.Modes
 {
-    public class ThreadStaticContext<T> : IContext<T>
+    public class StaticContext<T> : IContext<T>
         where T : class
     {
-        [ThreadStatic]
         private static T _instance;
 
         public T Current => _instance;

@@ -1,4 +1,4 @@
-﻿namespace BloodCore.Persistence.Context
+﻿namespace BloodCore.Persistence.Context.Modes
 {
     public interface IContext<T> where T : class
     {

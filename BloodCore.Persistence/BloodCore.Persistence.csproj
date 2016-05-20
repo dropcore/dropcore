@@ -51,12 +51,12 @@
   <ItemGroup>
     <Compile Include="Adapter\IPersistenceAdapter.cs" />
     <Compile Include="Adapter\MySqlAdapter.cs" />
-    <Compile Include="Context\IContext.cs" />
+    <Compile Include="Context\Modes\IContext.cs" />
     <Compile Include="Context\SessionContext.cs" />
     <Compile Include="Context\SessionFactoryContext.cs" />
-    <Compile Include="Context\StaticContext.cs" />
-    <Compile Include="Context\ThreadStaticContext.cs" />
-    <Compile Include="Context\WebSessionContext.cs" />
+    <Compile Include="Context\Modes\StaticContext.cs" />
+    <Compile Include="Context\Modes\ThreadStaticContext.cs" />
+    <Compile Include="Context\Modes\WebSessionContext.cs" />
     <Compile Include="Http\PersistenceModule.cs" />
     <Compile Include="Session\SessionImpl.cs" />
     <Compile Include="Session\ISession.cs" />

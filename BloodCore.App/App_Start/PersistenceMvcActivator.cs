@@ -2,6 +2,7 @@
 using BloodCore.Persistence.Session;
 using BloodCore.Persistence.Adapter;
 using System.Configuration;
+using BloodCore.Persistence.Context.Modes;
 
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(BloodCore.App.App_Start.PersistenceMvcActivator), "Start")]
 [assembly: WebActivatorEx.ApplicationShutdownMethod(typeof(BloodCore.App.App_Start.PersistenceMvcActivator), "Shutdown")]

@@ -1,10 +1,11 @@
-﻿using BloodCore.Persistence.Session;
+﻿using BloodCore.Persistence.Context.Modes;
+using BloodCore.Persistence.Session;
 
 namespace BloodCore.Persistence.Context
 {
     public static class SessionContext
     {
-        private static IContext<ISession> Context { get; set; }
+        public static IContext<ISession> Context { get; private set; }
 
         public static ISession Current => Context.Current;
 

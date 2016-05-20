@@ -14,9 +14,6 @@ namespace BloodCore.Persistence.Session
 
         public void Dispose()
         {
-            if (Connection.State != ConnectionState.Closed)
-                Connection.Close();
-
             Connection.Dispose();
         }
 

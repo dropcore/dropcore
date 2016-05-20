@@ -1,6 +1,6 @@
 ﻿using System.Web;
 
-namespace BloodCore.Persistence.Context
+namespace BloodCore.Persistence.Context.Modes
 {
     public class WebSessionContext<T> : IContext<T>
         where T : class
