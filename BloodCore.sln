@@ -17,6 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".git", ".git", "{06234E0E-4
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{CA7A838A-C654-4D25-9023-71FEDD5171D0}"
 	ProjectSection(SolutionItems) = preProject
+		AUTHORS.txt = AUTHORS.txt
 		LICENSE.txt = LICENSE.txt
 	EndProjectSection
 EndProject
