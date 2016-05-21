@@ -19,6 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{
 	ProjectSection(SolutionItems) = preProject
 		AUTHORS.txt = AUTHORS.txt
 		LICENSE.txt = LICENSE.txt
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Persistence", "Persistence", "{ED75AD72-474A-4402-AF4E-5B4270B084ED}"
