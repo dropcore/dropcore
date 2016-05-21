@@ -1,4 +1,5 @@
-﻿using BloodCore.Persistence.Context.Modes;
+﻿using System;
+using BloodCore.Persistence.Context.Modes;
 using BloodCore.Persistence.Session;
 
 namespace BloodCore.Persistence.Context

@@ -58,6 +58,7 @@
     <Compile Include="Context\Modes\ThreadStaticContext.cs" />
     <Compile Include="Context\Modes\WebSessionContext.cs" />
     <Compile Include="Http\PersistenceModule.cs" />
+    <Compile Include="PersistenceProvider.cs" />
     <Compile Include="Session\SessionImpl.cs" />
     <Compile Include="Session\ISession.cs" />
     <Compile Include="Session\ISessionFactory.cs" />
