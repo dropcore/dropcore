@@ -1,4 +1,4 @@
-![BloodCore GitHub Header](https://raw.githubusercontent.com/wow-bloodcore/image-assets/master/github-header.png)
+![BloodCore GitHub Header](https://raw.githubusercontent.com/web-bloodcore/image-assets/master/github-header.png)
 
 # Modules
 
