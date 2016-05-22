@@ -39,14 +39,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BloodCore.Module", "BloodCo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BloodCore.Module.User.Schema", "BloodCore.Module.User.Schema\BloodCore.Module.User.Schema.csproj", "{F954E4AF-C239-4461-ABF9-4CDC7309C6D6}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".tools", ".tools", "{01EC598A-0C05-4DA6-BB15-1AB26420F53F}"
-	ProjectSection(SolutionItems) = preProject
-		.tools\configuration.bat = .tools\configuration.bat
-		.tools\configuration.bat.ex = .tools\configuration.bat.ex
-		.tools\migrate-module.bat = .tools\migrate-module.bat
-		.tools\migrate.bat = .tools\migrate.bat
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BloodCore.Module.Tests", "BloodCore.Module.Tests\BloodCore.Module.Tests.csproj", "{AF3C09C5-4ABA-477C-9987-D4C05EB7F202}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BloodCore.Module.User.Tests", "BloodCore.Module.User.Tests\BloodCore.Module.User.Tests.csproj", "{3A36C0D0-CDD3-4E15-8FD9-87481057F23D}"
@@ -59,6 +51,22 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".config", ".config", "{5E78
 	ProjectSection(SolutionItems) = preProject
 		.config\TestApp.config = .config\TestApp.config
 		.config\WebApp.config = .config\WebApp.config
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".tools", ".tools", "{2833DE39-E1DF-4F98-A3F2-999371D6737D}"
+	ProjectSection(SolutionItems) = preProject
+		.tools\migrate-dev.bat = .tools\migrate-dev.bat
+		.tools\migrate-test.bat = .tools\migrate-test.bat
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "migration", "migration", "{C3B5BE67-96A1-488B-AD26-ACD5CF7138E3}"
+	ProjectSection(SolutionItems) = preProject
+		.tools\migration\configuration-development.bat = .tools\migration\configuration-development.bat
+		.tools\migration\configuration-development.bat.ex = .tools\migration\configuration-development.bat.ex
+		.tools\migration\configuration-test.bat = .tools\migration\configuration-test.bat
+		.tools\migration\configuration-test.bat.ex = .tools\migration\configuration-test.bat.ex
+		.tools\migration\migrate-module.bat = .tools\migration\migrate-module.bat
+		.tools\migration\migrate.bat = .tools\migration\migrate.bat
 	EndProjectSection
 EndProject
 Global
@@ -126,5 +134,6 @@ Global
 		{AF3C09C5-4ABA-477C-9987-D4C05EB7F202} = {FB1BEC7E-901E-4482-9D70-3FB0944185A9}
 		{3A36C0D0-CDD3-4E15-8FD9-87481057F23D} = {93F7C75E-E4A5-4614-A85A-F7B4CDA70ABE}
 		{5A46EE7D-CFC9-4F55-B1DE-002AFA1575B9} = {28D7F9EC-69E4-4A72-89DB-687497B57C64}
+		{C3B5BE67-96A1-488B-AD26-ACD5CF7138E3} = {2833DE39-E1DF-4F98-A3F2-999371D6737D}
 	EndGlobalSection
 EndGlobal
