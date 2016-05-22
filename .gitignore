@@ -246,3 +246,6 @@ ModelManifest.xml
 
 # WebApp configuration file.
 WebApp.config
+
+# Migration configuration file.
+.tools/configuration.bat
