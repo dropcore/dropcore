@@ -39,6 +39,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Module", "Module", "{FB1BEC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BloodCore.Module", "BloodCore.Module\BloodCore.Module.csproj", "{B7634A00-9C80-44D1-B66F-4B628446C654}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BloodCore.Module.User.Schema", "BloodCore.Module.User.Schema\BloodCore.Module.User.Schema.csproj", "{F954E4AF-C239-4461-ABF9-4CDC7309C6D6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".tools", ".tools", "{01EC598A-0C05-4DA6-BB15-1AB26420F53F}"
+	ProjectSection(SolutionItems) = preProject
+		.tools\configuration.bat = .tools\configuration.bat
+		.tools\migrate-module.bat = .tools\migrate-module.bat
+		.tools\migrate.bat = .tools\migrate.bat
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,6 +82,10 @@ Global
 		{B7634A00-9C80-44D1-B66F-4B628446C654}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7634A00-9C80-44D1-B66F-4B628446C654}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7634A00-9C80-44D1-B66F-4B628446C654}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F954E4AF-C239-4461-ABF9-4CDC7309C6D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F954E4AF-C239-4461-ABF9-4CDC7309C6D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F954E4AF-C239-4461-ABF9-4CDC7309C6D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F954E4AF-C239-4461-ABF9-4CDC7309C6D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -84,5 +97,6 @@ Global
 		{3A6039DE-8562-4115-ACD2-89384BD36E37} = {93F7C75E-E4A5-4614-A85A-F7B4CDA70ABE}
 		{B81E014D-3E56-4242-9A6C-7A6AD2327EED} = {93F7C75E-E4A5-4614-A85A-F7B4CDA70ABE}
 		{B7634A00-9C80-44D1-B66F-4B628446C654} = {FB1BEC7E-901E-4482-9D70-3FB0944185A9}
+		{F954E4AF-C239-4461-ABF9-4CDC7309C6D6} = {93F7C75E-E4A5-4614-A85A-F7B4CDA70ABE}
 	EndGlobalSection
 EndGlobal
