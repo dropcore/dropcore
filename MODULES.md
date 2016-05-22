@@ -2,6 +2,8 @@
 
 # Modules
 
+This document details how modules are implemented.
+
 ## Structure
 
 Below is an example of how a module would be structure. You might also take a look at `BloodCore.Module.User` and the related class libraries.
