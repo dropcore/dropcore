@@ -2,14 +2,47 @@
 
 ## Structure
 
-The general structure of a module consists of two projects. One project is there for providing the web-application interface of your module. The other is there for providing shared functionality that you might want to share to other modules.
+Below is an example of how a module would be structure. You might also take a look at `BloodCore.Module.User` and the related class libraries.
 
-An example would be the following:
+### BloodCore.Module.Example
 
-* `BloodCore.Module.Example`
-    * _Controllers, Views, etc..._
-* `BloodCore.Module.Example.Shared`
-    * _DataModels, Repositories, etc..._
+**Type:** `Class Library`
+
+This project contains the main web-application part of the module. That would include any controllers, view models or views.
+
+#### Required packages
+
+* `Microsoft.AspNet.Mvc`
+* `MvcCodeRouting`
+* `Unity`
+
+### BloodCore.Module.Example.Shared
+
+**Type:** `Class Library`
+
+This project contains any re-usable logic for the module that might be shared to any other module that wants to take advantage of the functionality provided by the module.
+
+This would include any data models, repositories or services.
+
+#### Required packages
+
+* `Dapper`
+
+### BloodCore.Module.Example.Schema
+
+**Type:** `Class Library`
+
+This project contains all migration logic for the database portion of the module. This includes migration of tables as well as seeding of test data for unit tests.
+
+#### Required packages
+
+* `FluentMigrator`
+
+### BloodCore.Module.Example.Tests
+
+**Type:** `Unit Test Project`
+
+This project contains the unit tests for all implemented functionality of the module.
 
 ## Quirks
 
