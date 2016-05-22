@@ -245,7 +245,9 @@ ModelManifest.xml
 .fake/
 
 # WebApp configuration file.
+TestApp.config
 WebApp.config
 
-# Migration configuration file.
-.tools/configuration.bat
+# Migration configuration files.
+configuration-dev.bat
+configuration-test.bat

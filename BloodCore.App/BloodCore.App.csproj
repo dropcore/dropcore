@@ -136,14 +136,15 @@
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
+    <Content Include="..\.config\WebApp.config">
+      <Link>WebApp.config</Link>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-    <Content Include="WebApp.config" />
-    <None Include="WebApp.config.ex" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
