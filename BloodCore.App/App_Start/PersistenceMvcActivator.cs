@@ -12,6 +12,7 @@ namespace BloodCore.App.App_Start
         public static void Start()
         {
             PersistenceProvider.Open<MySqlAdapter>(ConfigurationManager.AppSettings["ConnectionString"]);
+            PersistenceProvider.RegisterTypes(UnityConfig.GetConfiguredContainer());
         }
 
         public static void Shutdown()

@@ -38,7 +38,7 @@ namespace BloodCore.Module.User.Schema.Models.UserModel
                     .NotNullable()
                     //.WithDefault(SystemMethods.CurrentUTCDateTime)
 
-                .WithColumn("UpdateAtUtc")
+                .WithColumn("UpdatedAtUtc")
                     .AsDateTime()
                     .NotNullable();
                     //.WithDefault(SystemMethods.CurrentUTCDateTime);
