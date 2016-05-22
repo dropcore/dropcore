@@ -2,7 +2,7 @@
 
 namespace BloodCore.Persistence.Context.Modes
 {
-    public class WebSessionContext<T> : IContext<T>
+    internal class WebSessionContext<T> : IContext<T>
         where T : class
     {
         public T Current

@@ -150,6 +150,14 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BloodCore.Module.User\BloodCore.Module.User.csproj">
+      <Project>{3a6039de-8562-4115-acd2-89384bd36e37}</Project>
+      <Name>BloodCore.Module.User</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BloodCore.Module\BloodCore.Module.csproj">
+      <Project>{B7634A00-9C80-44D1-B66F-4B628446C654}</Project>
+      <Name>BloodCore.Module</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BloodCore.Persistence\BloodCore.Persistence.csproj">
       <Project>{96d66d5e-85fd-48b1-9b57-c0c6363d4147}</Project>
       <Name>BloodCore.Persistence</Name>

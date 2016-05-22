@@ -2,6 +2,8 @@
 using BloodCore.Persistence.Context;
 using BloodCore.Persistence.Context.Modes;
 using BloodCore.Persistence.Session;
+using Microsoft.Practices.Unity;
+using System.Data;
 
 namespace BloodCore.Persistence
 {
@@ -24,6 +26,13 @@ namespace BloodCore.Persistence
         {
             var factory = SessionFactoryContext.Unbind();
             // TODO: Close factory if applicable?
+        }
+
+        public static void RegisterTypes(IUnityContainer container)
+        {
+            container.RegisterType<ISession>(new InjectionFactory(c => SessionContext.Current));
+            container.RegisterType<ISessionFactory>(new InjectionFactory(c => SessionFactoryContext.Current));
+            container.RegisterType<IDbConnection>(new InjectionFactory(c => SessionContext.Current.Connection));
         }
     }
 }
