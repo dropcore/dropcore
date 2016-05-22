@@ -7,7 +7,7 @@ namespace BloodCore.Module
 {
     public class ModuleManager
     {
-        private List<IModule> Modules { get; set; }
+        public List<IModule> Modules { get; private set; }
 
         public ModuleManager()
         {

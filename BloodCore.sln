@@ -47,6 +47,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".tools", ".tools", "{01EC59
 		.tools\migrate.bat = .tools\migrate.bat
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BloodCore.Module.Tests", "BloodCore.Module.Tests\BloodCore.Module.Tests.csproj", "{AF3C09C5-4ABA-477C-9987-D4C05EB7F202}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -85,6 +87,10 @@ Global
 		{F954E4AF-C239-4461-ABF9-4CDC7309C6D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F954E4AF-C239-4461-ABF9-4CDC7309C6D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F954E4AF-C239-4461-ABF9-4CDC7309C6D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF3C09C5-4ABA-477C-9987-D4C05EB7F202}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF3C09C5-4ABA-477C-9987-D4C05EB7F202}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF3C09C5-4ABA-477C-9987-D4C05EB7F202}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF3C09C5-4ABA-477C-9987-D4C05EB7F202}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -97,5 +103,6 @@ Global
 		{B81E014D-3E56-4242-9A6C-7A6AD2327EED} = {93F7C75E-E4A5-4614-A85A-F7B4CDA70ABE}
 		{B7634A00-9C80-44D1-B66F-4B628446C654} = {FB1BEC7E-901E-4482-9D70-3FB0944185A9}
 		{F954E4AF-C239-4461-ABF9-4CDC7309C6D6} = {93F7C75E-E4A5-4614-A85A-F7B4CDA70ABE}
+		{AF3C09C5-4ABA-477C-9987-D4C05EB7F202} = {FB1BEC7E-901E-4482-9D70-3FB0944185A9}
 	EndGlobalSection
 EndGlobal
