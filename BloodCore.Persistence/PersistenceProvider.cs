@@ -14,6 +14,7 @@ namespace BloodCore.Persistence
         {
             SessionContext.SetContext(new WebSessionContext<ISession>());
             SessionFactoryContext.SetContext(new StaticContext<ISessionFactory>());
+            TransactionContext.SetContext(new WebSessionContext<IDbTransaction>());
 
             var factory = new SessionFactoryImpl()
                 .SetAdapter(new TPersistenceAdapter())
@@ -30,8 +31,9 @@ namespace BloodCore.Persistence
 
         public static void RegisterTypes(IUnityContainer container)
         {
-            container.RegisterType<ISession>(new InjectionFactory(c => SessionContext.Current));
-            container.RegisterType<ISessionFactory>(new InjectionFactory(c => SessionFactoryContext.Current));
+            // Currently we only have to expose the IDbConnection to external modules.
+            //container.RegisterType<ISession>(new InjectionFactory(c => SessionContext.Current));
+            //container.RegisterType<ISessionFactory>(new InjectionFactory(c => SessionFactoryContext.Current));
             container.RegisterType<IDbConnection>(new InjectionFactory(c => SessionContext.Current.Connection));
         }
     }

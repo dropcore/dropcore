@@ -27,6 +27,8 @@ namespace BloodCore.Persistence.Http
             if (session == null)
                 return;
 
+            TransactionContext.Unbind()?.Dispose();
+
             session.Dispose();
         }
     }
