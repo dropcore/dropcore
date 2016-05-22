@@ -17,10 +17,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".git", ".git", "{06234E0E-4
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".docs", ".docs", "{CA7A838A-C654-4D25-9023-71FEDD5171D0}"
 	ProjectSection(SolutionItems) = preProject
-		AUTHORS.txt = AUTHORS.txt
+		AUTHORS.md = AUTHORS.md
 		LICENSE.txt = LICENSE.txt
 		MODULES.md = MODULES.md
 		README.md = README.md
+		TECHNOLOGY.md = TECHNOLOGY.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Persistence", "Persistence", "{ED75AD72-474A-4402-AF4E-5B4270B084ED}"

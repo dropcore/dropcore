@@ -1,3 +1,5 @@
+![BloodCore GitHub Header](https://raw.githubusercontent.com/wow-bloodcore/image-assets/master/github-header.png)
+
 # Modules
 
 ## Structure
