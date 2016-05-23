@@ -1,8 +1,8 @@
-![BloodCore GitHub Header](https://raw.githubusercontent.com/web-bloodcore/image-assets/master/github-header.png)
+![DropCore GitHub Header](https://raw.githubusercontent.com/dropcore/image-assets/master/github-header.png)
 
 # Technology
 
-This document outlines the technology leveraged by **BloodCore**.
+This document outlines the technology leveraged by **DropCore**.
 
 ## ORM
 
