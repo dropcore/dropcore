@@ -1,4 +1,4 @@
-![DropCore GitHub Header](https://raw.githubusercontent.com/web-DropCore/image-assets/master/github-header.png)
+![DropCore GitHub Header](https://raw.githubusercontent.com/dropcore/image-assets/master/github-header.png)
 
 # About
 
