@@ -8,7 +8,7 @@ This document outlines the technology leveraged by **DropCore**.
 
 The ORM that is implemented by the software is the [Dapper](https://github.com/StackExchange/dapper-dot-net) micro ORM. This is used in conjunction with a customer **ADO.NET** wrapper that manages the connection.
 
-The custom **ADO.NET** wrapper resides in the `BloodCore.Persistence` namespace.
+The custom **ADO.NET** wrapper resides in the `DropCore.Persistence` namespace.
 
 ## Dependency injection
 

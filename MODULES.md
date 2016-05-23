@@ -6,9 +6,9 @@ This document details how modules are implemented.
 
 ## Structure
 
-Below is an example of how a module would be structure. You might also take a look at `BloodCore.Module.User` and the related class libraries.
+Below is an example of how a module would be structure. You might also take a look at `DropCore.Module.User` and the related class libraries.
 
-### BloodCore.Module.Example
+### DropCore.Module.Example
 
 **Type:** `Class Library`
 
@@ -20,7 +20,7 @@ This project contains the main web-application part of the module. That would in
 * `MvcCodeRouting`
 * `Unity`
 
-### BloodCore.Module.Example.Shared
+### DropCore.Module.Example.Shared
 
 **Type:** `Class Library`
 
@@ -32,7 +32,7 @@ This would include any data models, repositories or services.
 
 * `Dapper`
 
-### BloodCore.Module.Example.Schema
+### DropCore.Module.Example.Schema
 
 **Type:** `Class Library`
 
@@ -42,7 +42,7 @@ This project contains all migration logic for the database portion of the module
 
 * `FluentMigrator`
 
-### BloodCore.Module.Example.Tests
+### DropCore.Module.Example.Tests
 
 **Type:** `Unit Test Project`
 
@@ -58,13 +58,13 @@ Due to how **Visual Studio** works internally to provide functionality for **Raz
 
 ##### Symptom
 
-    @model BloodCore.Module.Example.Shared.Models.Example
+    @model DropCore.Module.Example.Shared.Models.Example
     
     The name 'model' does not exist in the current context
 
 ##### Solution
 
-Copy `BloodCore.App\Views\web.config` into the `Views\` folder of your module project.
+Copy `DropCore.App\Views\web.config` into the `Views\` folder of your module project.
 
 #### Intellisense
 

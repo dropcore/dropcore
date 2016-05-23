@@ -1,5 +1,5 @@
 @echo off
 
-migration\migrate-module.bat BloodCore.Module.User.Schema %1 %2
+migration\migrate-module.bat DropCore.Module.User.Schema %1 %2
 
 PAUSE
