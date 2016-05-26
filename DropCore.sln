@@ -51,7 +51,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".config", ".config", "{5E78C19D-9BBD-407D-8F72-3A4C1816B63A}"
 	ProjectSection(SolutionItems) = preProject
 		.config\TestApp.config = .config\TestApp.config
+		.config\TestApp.config.ex = .config\TestApp.config.ex
 		.config\WebApp.config = .config\WebApp.config
+		.config\WebApp.config.ex = .config\WebApp.config.ex
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".tools", ".tools", "{2833DE39-E1DF-4F98-A3F2-999371D6737D}"
