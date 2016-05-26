@@ -10,4 +10,4 @@ __DropCore__ is licensed under the **MIT** license. See the `LICENSE.md` file fo
 
 ## Authors
 
-See the __AUTHORS.md__ file.
+See the `AUTHORS.md` file.
