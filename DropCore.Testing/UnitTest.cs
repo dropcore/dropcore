@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
-namespace DropCore.Persistence.Tests
+namespace DropCore.Testing
 {
     public abstract class UnitTest
     {

@@ -3,8 +3,8 @@ using System.Data;
 
 namespace DropCore.Testing
 {
-    public abstract class PersistenceTest
+    public abstract class PersistenceTest : UnitTest
     {
-        protected IDbConnection Connection => SessionContext.Current.Connection;
+        protected static IDbConnection Connection => SessionContext.Current.Connection;
     }
 }

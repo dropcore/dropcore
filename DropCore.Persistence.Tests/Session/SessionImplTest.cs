@@ -1,5 +1,6 @@
 ﻿using DropCore.Persistence.Session;
 using DropCore.Persistence.Tests.Fixtures;
+using DropCore.Testing;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Data;
