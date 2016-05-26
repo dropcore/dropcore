@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{96D66D5E-85FD-48B1-9B57-C0C6363D4147}</ProjectGuid>
+    <ProjectGuid>{385F9CA5-56CE-4B99-8132-B10295874DDD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DropCore.Persistence</RootNamespace>
-    <AssemblyName>DropCore.Persistence</AssemblyName>
+    <RootNamespace>DropCore</RootNamespace>
+    <AssemblyName>DropCore</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,14 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Dapper, Version=1.40.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Dapper.1.42\lib\net45\Dapper.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="FluentMigrator, Version=1.6.1.0, Culture=neutral, PublicKeyToken=aacfc7de5acabf05, processorArchitecture=MSIL">
-      <HintPath>..\packages\FluentMigrator.1.6.1\lib\40\FluentMigrator.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
       <Private>True</Private>
@@ -54,6 +46,10 @@
       <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.6.9.8\lib\net45\MySql.Data.dll</HintPath>
       <Private>True</Private>
@@ -61,9 +57,29 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\BloodCore.Module.User\Bin\System.Web.Mvc.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -73,25 +89,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Adapter\IPersistenceAdapter.cs" />
-    <Compile Include="Adapter\MySqlAdapter.cs" />
-    <Compile Include="Context\Modes\IContext.cs" />
-    <Compile Include="Context\SessionContext.cs" />
-    <Compile Include="Context\SessionFactoryContext.cs" />
-    <Compile Include="Context\Modes\StaticContext.cs" />
-    <Compile Include="Context\Modes\ThreadStaticContext.cs" />
-    <Compile Include="Context\Modes\WebSessionContext.cs" />
-    <Compile Include="Context\TransactionContext.cs" />
-    <Compile Include="Mvc\PersistenceController.cs" />
-    <Compile Include="Mvc\TransactionAttribute.cs" />
-    <Compile Include="Http\PersistenceModule.cs" />
-    <Compile Include="PersistenceProvider.cs" />
-    <Compile Include="Repository.cs" />
-    <Compile Include="Session\SessionImpl.cs" />
-    <Compile Include="Session\ISession.cs" />
-    <Compile Include="Session\ISessionFactory.cs" />
+    <Compile Include="Module\IModule.cs" />
+    <Compile Include="Module\ModuleManager.cs" />
+    <Compile Include="Persistence\Adapter\IPersistenceAdapter.cs" />
+    <Compile Include="Persistence\Adapter\MySqlAdapter.cs" />
+    <Compile Include="Persistence\Context\Modes\IContext.cs" />
+    <Compile Include="Persistence\Context\Modes\StaticContext.cs" />
+    <Compile Include="Persistence\Context\Modes\ThreadStaticContext.cs" />
+    <Compile Include="Persistence\Context\Modes\WebSessionContext.cs" />
+    <Compile Include="Persistence\Context\SessionContext.cs" />
+    <Compile Include="Persistence\Context\SessionFactoryContext.cs" />
+    <Compile Include="Persistence\Context\TransactionContext.cs" />
+    <Compile Include="Persistence\Http\PersistenceModule.cs" />
+    <Compile Include="Persistence\Mvc\PersistenceController.cs" />
+    <Compile Include="Persistence\Mvc\TransactionAttribute.cs" />
+    <Compile Include="Persistence\PersistenceProvider.cs" />
+    <Compile Include="Persistence\Repository.cs" />
+    <Compile Include="Persistence\Session\ISession.cs" />
+    <Compile Include="Persistence\Session\ISessionFactory.cs" />
+    <Compile Include="Persistence\Session\SessionFactoryImpl.cs" />
+    <Compile Include="Persistence\Session\SessionImpl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Session\SessionFactoryImpl.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

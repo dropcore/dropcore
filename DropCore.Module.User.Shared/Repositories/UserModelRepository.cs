@@ -39,7 +39,7 @@ namespace DropCore.Module.User.Shared.Repositories
 
         class Sql
         {
-            public static string Select = @"
+            public const string Select = @"
 SELECT
     Id,
     Username,
@@ -52,7 +52,7 @@ FROM
     users
             ";
 
-            public static string Insert = @"
+            public const string Insert = @"
 INSERT INTO
     users
     (Username, Email, Salt, PasswordHash, CreatedAtUtc, UpdatedAtUtc)
@@ -60,7 +60,7 @@ VALUES
     (@Username, @Email, @Salt, @PasswordHash, @CreatedAtUtc, @UpdatedAtUtc);
 ";
 
-            public static string Update = @"
+            public const string Update = @"
 UPDATE
     users
 SET

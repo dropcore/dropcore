@@ -78,9 +78,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DropCore.Module\DropCore.Module.csproj">
-      <Project>{B7634A00-9C80-44D1-B66F-4B628446C654}</Project>
-      <Name>DropCore.Module</Name>
+    <ProjectReference Include="..\DropCore\DropCore.csproj">
+      <Project>{385f9ca5-56ce-4b99-8132-b10295874ddd}</Project>
+      <Name>DropCore</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

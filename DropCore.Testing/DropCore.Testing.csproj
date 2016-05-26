@@ -46,9 +46,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DropCore.Persistence\DropCore.Persistence.csproj">
-      <Project>{96D66D5E-85FD-48B1-9B57-C0C6363D4147}</Project>
-      <Name>DropCore.Persistence</Name>
+    <ProjectReference Include="..\DropCore\DropCore.csproj">
+      <Project>{385f9ca5-56ce-4b99-8132-b10295874ddd}</Project>
+      <Name>DropCore</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

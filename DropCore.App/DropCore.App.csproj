@@ -139,6 +139,9 @@
     <Content Include="..\.config\WebApp.config">
       <Link>WebApp.config</Link>
     </Content>
+    <Content Include="..\.config\DropCore.json">
+      <Link>DropCore.json</Link>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -155,13 +158,9 @@
       <Project>{3a6039de-8562-4115-acd2-89384bd36e37}</Project>
       <Name>DropCore.Module.User</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DropCore.Module\DropCore.Module.csproj">
-      <Project>{B7634A00-9C80-44D1-B66F-4B628446C654}</Project>
-      <Name>DropCore.Module</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DropCore.Persistence\DropCore.Persistence.csproj">
-      <Project>{96d66d5e-85fd-48b1-9b57-c0c6363d4147}</Project>
-      <Name>DropCore.Persistence</Name>
+    <ProjectReference Include="..\DropCore\DropCore.csproj">
+      <Project>{385f9ca5-56ce-4b99-8132-b10295874ddd}</Project>
+      <Name>DropCore</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

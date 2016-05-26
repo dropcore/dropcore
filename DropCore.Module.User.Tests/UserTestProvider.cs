@@ -7,7 +7,9 @@ namespace DropCore.Module.User.Tests
     public class UserTestProvider
     {
         [AssemblyInitialize]
+#pragma warning disable CC0057 // Unused parameters
         public static void Initialize(TestContext context)
+#pragma warning restore CC0057 // Unused parameters
         {
             PersistenceTestProvider.Open();
         }

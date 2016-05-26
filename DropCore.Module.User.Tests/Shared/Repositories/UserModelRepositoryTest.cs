@@ -63,7 +63,7 @@ namespace DropCore.Module.User.Tests.Shared.Repositories
             Assert.AreNotEqual("fooey", user.Salt);
             user.Salt = "fooey";
             Assert.IsTrue(Repository.Save(user) > 0);
-            
+
             user = Repository.Get().FirstOrDefault(u => u.Username == "Test");
             Assert.AreEqual("fooey", user.Salt);
         }

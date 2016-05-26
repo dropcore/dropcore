@@ -8,7 +8,7 @@ namespace DropCore.App.App_Start
     /// </summary>
     public class UnityConfig
     {
-        private static Lazy<IUnityContainer> container = new Lazy<IUnityContainer>(() =>
+        private static readonly Lazy<IUnityContainer> container = new Lazy<IUnityContainer>(() =>
         {
             var container = new UnityContainer();
             return container;

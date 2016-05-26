@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("DropCore.Persistence")]
+[assembly: AssemblyTitle("DropCore")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("DropCore.Persistence")]
+[assembly: AssemblyProduct("DropCore")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("96d66d5e-85fd-48b1-9b57-c0c6363d4147")]
+[assembly: Guid("385f9ca5-56ce-4b99-8132-b10295874ddd")]
 
 // Version information for an assembly consists of the following four values:
 //

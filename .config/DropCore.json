@@ -1,0 +1,9 @@
+{
+    "modules": [
+        {
+            "app": "DropCore.Module.User",
+            "schema": "DropCore.Module.User.Schema",
+            "directory": "..\\DropCore.Module.User\\bin"
+        }
+    ]
+}

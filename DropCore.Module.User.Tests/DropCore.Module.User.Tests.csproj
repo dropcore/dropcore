@@ -60,13 +60,13 @@
       <Project>{B81E014D-3E56-4242-9A6C-7A6AD2327EED}</Project>
       <Name>DropCore.Module.User.Shared</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DropCore.Persistence\DropCore.Persistence.csproj">
-      <Project>{96d66d5e-85fd-48b1-9b57-c0c6363d4147}</Project>
-      <Name>DropCore.Persistence</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DropCore.Testing\DropCore.Testing.csproj">
       <Project>{5A46EE7D-CFC9-4F55-B1DE-002AFA1575B9}</Project>
       <Name>DropCore.Testing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DropCore\DropCore.csproj">
+      <Project>{385f9ca5-56ce-4b99-8132-b10295874ddd}</Project>
+      <Name>DropCore</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
