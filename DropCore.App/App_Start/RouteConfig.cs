@@ -9,7 +9,7 @@ namespace DropCore.App
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-            routes.MapCodeRoutes(typeof(Controllers.HomeController));
+            //routes.MapCodeRoutes(typeof(Controllers.HomeController));
         }
     }
 }

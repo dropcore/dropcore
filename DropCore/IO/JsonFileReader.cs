@@ -15,7 +15,7 @@ namespace DropCore.IO
         public JsonFileReader(string path)
         {
             if (!File.Exists(path))
-                throw new FileNotFoundException("Could not find JSON file to read.", path);
+                throw new FileNotFoundException("Could not find JSON file.", path);
 
             FileStream = File.OpenRead(path);
             StreamReader = new StreamReader(FileStream);

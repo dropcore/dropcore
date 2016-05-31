@@ -16,12 +16,12 @@ namespace DropCore.Persistence.Http
             context.EndRequest += Context_EndRequest;
         }
 
-        private static void Context_BeginRequest(object sender, System.EventArgs e)
+        private static void Context_BeginRequest(object sender, global::System.EventArgs e)
         {
             SessionContext.Bind(SessionFactoryContext.Current.OpenSession());
         }
 
-        private static void Context_EndRequest(object sender, System.EventArgs e)
+        private static void Context_EndRequest(object sender, global::System.EventArgs e)
         {
             var session = SessionContext.Unbind();
             if (session == null)

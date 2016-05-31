@@ -93,9 +93,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configuration\AppConfiguration.cs" />
+    <Compile Include="Configuration\ModuleConfiguration.cs" />
+    <Compile Include="DropCoreProvider.cs" />
+    <Compile Include="Module\IModuleLoader.cs" />
+    <Compile Include="Module\IModuleTypeManager.cs" />
+    <Compile Include="System\Wrappers\AssemblyLoaderImpl.cs" />
+    <Compile Include="System\Wrappers\BuildManagerImpl.cs" />
+    <Compile Include="System\Wrappers\FileSystemImpl.cs" />
+    <Compile Include="System\Wrappers\IAssemblyLoader.cs" />
     <Compile Include="IO\JsonFileReader.cs" />
     <Compile Include="Module\IModule.cs" />
+    <Compile Include="System\IAssemblyProbingService.cs" />
+    <Compile Include="Module\ModuleLoaderImpl.cs" />
+    <Compile Include="Module\ModuleContainer.cs" />
     <Compile Include="Module\ModuleManager.cs" />
+    <Compile Include="System\AssemblyProbingServiceImpl.cs" />
+    <Compile Include="Module\ModuleTypeManagerImpl.cs" />
     <Compile Include="Persistence\Adapter\IPersistenceAdapter.cs" />
     <Compile Include="Persistence\Adapter\MySqlAdapter.cs" />
     <Compile Include="Persistence\Context\Modes\IContext.cs" />
@@ -115,14 +129,14 @@
     <Compile Include="Persistence\Session\SessionFactoryImpl.cs" />
     <Compile Include="Persistence\Session\SessionImpl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="System\Wrappers\IBuildManager.cs" />
+    <Compile Include="System\Wrappers\IFileSystem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Configuration\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

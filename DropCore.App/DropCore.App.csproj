@@ -154,10 +154,6 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DropCore.Module.User\DropCore.Module.User.csproj">
-      <Project>{3a6039de-8562-4115-acd2-89384bd36e37}</Project>
-      <Name>DropCore.Module.User</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DropCore\DropCore.csproj">
       <Project>{385f9ca5-56ce-4b99-8132-b10295874ddd}</Project>
       <Name>DropCore</Name>
@@ -168,6 +164,7 @@
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildProjectDirectory)\..\.config\WebApplication.Extension.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <ProjectExtensions>

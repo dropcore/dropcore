@@ -1,72 +1,84 @@
-﻿using DropCore.Module;
+﻿using DropCore.Testing;
 using Microsoft.Practices.Unity;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using System;
 using System.Linq;
 using System.Web.Routing;
 
 namespace DropCore.Module.Tests
 {
     [TestClass]
-    public class ModuleManagerTest
+    public class ModuleManagerTest : UnitTest
     {
-        [TestMethod]
-        public void ModuleManager_Can_Add_Module_By_Generic_Type()
-        {
-            var manager = new ModuleManager();
+        IUnityContainer Container { get; set; }
+        Mock<IModuleLoader> LoaderMock { get; set; }
+        Mock<IModuleTypeManager> TypeManagerMock { get; set; }
+        ModuleManager ModuleManager { get; set; }
 
-            Assert.IsFalse(manager.Modules.OfType<ModuleStub>().Any());
-            manager.Add<ModuleStub>();
-            Assert.IsTrue(manager.Modules.OfType<ModuleStub>().Any());
+        [TestInitialize]
+        public void Initialize()
+        {
+            Container = new UnityContainer();
+
+            LoaderMock = new Mock<IModuleLoader>();
+            TypeManagerMock = new Mock<IModuleTypeManager>();
+            ModuleManager = new ModuleManager(Container, LoaderMock.Object, TypeManagerMock.Object);
+        }
+
+        [TestCleanup]
+        public void Cleanup()
+        {
+            Container.Dispose();
         }
 
         [TestMethod]
-        public void ModuleManager_Does_Not_Add_Duplicate_Modules()
+        public void ModuleManager_Can_Be_Initialized()
         {
-            var manager = new ModuleManager();
-            manager.Add<ModuleStub>();
-            manager.Add<ModuleStub>();
+            var assembly = GetType().Assembly;
+            TypeManagerMock.Setup(tm => tm.GetEntryPointType(assembly)).Returns(typeof(ModuleStub));
 
-            Assert.AreEqual(1, manager.Modules.OfType<ModuleStub>().Count());
+            LoaderMock.Setup(l => l.Load()).Returns(new[]
+            {
+                new ModuleContainer { Assembly = assembly }
+            });
+
+            ModuleManager.Initialize();
+            var module = ModuleManager.Modules.FirstOrDefault()?.Instance as ModuleStub;
+            Assert.IsNotNull(module);
         }
 
         [TestMethod]
-        public void ModuleManager_Registers_Module_Routes()
+        public void ModuleManager_Can_Register_Modules()
         {
-            var manager = new ModuleManager();
-            var moduleMock = new Mock<IModule>();
-            var stubRoutes = new RouteCollection();
+            var module = new ModuleStub();
+            ModuleManager.Modules.Add(new ModuleContainer { Instance = module });
+            Assert.IsFalse(module.Routed);
+            Assert.IsFalse(module.Typed);
 
-            manager.Modules.Add(moduleMock.Object);
-            manager.RegisterRoutes(stubRoutes);
-
-            moduleMock.Verify(m => m.RegisterRoutes(stubRoutes));
+            ModuleManager.Register(null);
+            Assert.IsTrue(module.Routed);
+            Assert.IsTrue(module.Typed);
         }
 
         [TestMethod]
-        public void ModuleManager_Registers_Module_Types()
+        public void ModuleManager_Raises_InvalidOperationException_If_Module_Does_Not_Have_An_Entry_Point_On_Initialize()
         {
-            var manager = new ModuleManager();
-            var moduleMock = new Mock<IModule>();
-            var stubContainer = new Mock<IUnityContainer>();
+            var assembly = typeof(Mock).Assembly;
+            LoaderMock.Setup(l => l.Load()).Returns(new[]
+            {
+                new ModuleContainer { Assembly = assembly },
+            });
 
-            manager.Modules.Add(moduleMock.Object);
-            manager.RegisterTypes(stubContainer.Object);
-
-            moduleMock.Verify(m => m.RegisterTypes(stubContainer.Object));
-        }
-    }
-
-    public class ModuleStub : IModule
-    {
-        public void RegisterRoutes(RouteCollection routes)
-        {
-            //
+            AssertRaise<InvalidOperationException>(() => ModuleManager.Initialize());
         }
 
-        public void RegisterTypes(IUnityContainer container)
+        [TestMethod]
+        public void ModuleManager_Raises_InvalidOperationException_If_Module_Does_Not_Have_An_Instance_On_Register()
         {
-            //
+            ModuleManager.Modules.Add(new ModuleContainer());
+
+            AssertRaise<InvalidOperationException>(() => ModuleManager.Register(null));
         }
     }
 }
